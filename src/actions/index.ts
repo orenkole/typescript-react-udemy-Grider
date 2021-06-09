@@ -11,11 +11,16 @@ interface Todo {
   completed: boolean;
 }
 
+interface fetchTodosAction {
+  type: ActionTypes.fetchTodos;
+  payload: Todo[];
+}
+
 export const fetchTodos = () => {
   return async (dispatch: Dispatch) => {
     const response = await axios.get<Todo[]>(url);
 
-    dispatch({
+    dispatch<fetchTodosAction>({
       type: ActionTypes.fetchTodos,
       payload: response.data
     })
