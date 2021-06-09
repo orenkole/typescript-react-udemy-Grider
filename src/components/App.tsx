@@ -5,7 +5,7 @@ import { Todo, fetchTodos, deleteTodo } from '../actions';
 
 interface AppProps {
   todos: Todo[];
-  fetchTodos: typeof fetchTodos;
+  fetchTodos: Function;
   deleteTodo: typeof deleteTodo;
 }
 
