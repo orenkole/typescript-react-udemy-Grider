@@ -23,9 +23,9 @@ export class _App extends React.Component<AppProps> {
   renderList(): JSX.Element[] {
     return this.props.todos.map((todo: Todo) => {
       return (
-          <div onClick={() => this.onTodoClick(todo.id)} key={todo.id}>
-            {todo.title}
-          </div>
+        <div onClick={() => this.onTodoClick(todo.id)} key={todo.id}>
+          {todo.title}
+        </div>
       );
     });
   }
